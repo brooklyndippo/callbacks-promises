@@ -10,11 +10,27 @@ function asyncNumberChecker(n) {
   });
 }
 
+
 // The function above returns a promise. Your job is 
 // to handle the promise in the function calls below. 
 // Handle success with .then() and errors with .catch()
 
-asyncNumberChecker(10)
+asyncNumberChecker(10).then((message) => {
+  console.log('Promise resolved successfully! 😀');
+  console.log(message);
+}).catch((err) => {
+  console.log('Promise rejected 😞');
+  console.log(err);
+});
 
+// returns 'promise rejected' message and the rejection error message
 
-asyncNumberChecker(5)
+asyncNumberChecker(5).then((message) => {
+  console.log('Promise resolved successfully! 😀');
+  console.log(message);
+}).catch((err) => {
+  console.log('Promise rejected 😞');
+  console.log(err);
+});
+
+// returns 'promise resolved successfully' message and the resolve message
